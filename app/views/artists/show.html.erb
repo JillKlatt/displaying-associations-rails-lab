@@ -1,0 +1,14 @@
+<h3>One Specific Artist</h3>
+
+<%=@artist.name%>
+
+<h4>This Artist's Songs:</h4>
+<ul>
+<%@artist.songs.each do |s|%>
+
+<li>
+<%= link_to s.title, song_path(s) %>
+</li>
+
+<%end%>
+</ul>
